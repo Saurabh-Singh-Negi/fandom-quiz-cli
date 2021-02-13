@@ -34,3 +34,19 @@ var questionArr = [
       answer: "brazil"
     }
   ];
+
+function check(question, answer) {
+  var userAns = readlineSync.question(question);
+  if(userAns === answer) {
+    console.log("Yay! you are right");
+  }
+
+  else {
+    console.log("you got it wrong");
+  }
+
+}
+
+for(var i=0;i<questionArr.length;i++) {
+    check(questionArr[i].question,questionArr[i].answer); 
+}
