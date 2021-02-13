@@ -1,3 +1,8 @@
+var readlineSync = require("readline-sync");
+
+var userName = readlineSync.question("Enter your name ");
+console.log("Welcome to the football quiz",userName);
+
 var questionArr = [
     {
       question: "Captain of Indian Football team?(first name) ",
