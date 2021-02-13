@@ -35,18 +35,24 @@ var questionArr = [
     }
   ];
 
+var score = 0;
 function check(question, answer) {
   var userAns = readlineSync.question(question);
   if(userAns === answer) {
     console.log("Yay! you are right");
+    score++;
   }
 
   else {
     console.log("you got it wrong");
   }
 
+  console.log("Current Score:", score);
+  console.log("-----------------------");
 }
 
 for(var i=0;i<questionArr.length;i++) {
     check(questionArr[i].question,questionArr[i].answer); 
 }
+
+console.log("Your final score is",score);
