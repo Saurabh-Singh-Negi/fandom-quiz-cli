@@ -52,8 +52,22 @@ function check(question, answer) {
 }
 
 for(var i=0;i<questionArr.length;i++) {
-    check(questionArr[i].question,questionArr[i].answer); 
-}
+    if(i==3 && score==3) {
+      console.log("<<<< Welcome to level 2 >>>>>");
+    }
+    if(i<3) {
+      check(questionArr[i].question,questionArr[i].answer);
+    }
+  
+    else if(i==3 && score<3) {
+      console.log("You couldn't make it to level 2");
+      break;
+    }
+  
+    else {
+      check(questionArr[i].question,questionArr[i].answer);
+    } 
+  }
 
 var highScores = [
     {
